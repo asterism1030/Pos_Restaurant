@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Pos_Client.view
 {
-    /// <summary>
-    /// MenuPage.xaml에 대한 상호 작용 논리
-    /// </summary>
     public partial class MenuPage : Page
     {
         public MenuPage()
