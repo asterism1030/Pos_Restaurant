@@ -8,6 +8,9 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MenuPage">
+    <!--
+    cs 가 아닌 xaml 에서의 databinding 방식
+    -->
     <Page.DataContext>
         <viewmodel:MenuViewModel />
     </Page.DataContext>
@@ -15,21 +18,27 @@
     <Grid>
         <Grid HorizontalAlignment="Center" Height="435" VerticalAlignment="Center" Width="800">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="33*"  />
-                <ColumnDefinition Width="127*" />
+                <ColumnDefinition Width="10*"  />
+                <ColumnDefinition Width="30*" />
             </Grid.ColumnDefinitions>
             <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="auto" Focusable="False">
                 <ListBox x:Name="MenuTitle"
                          ItemsSource="{Binding MenuList}">
+                    <!-- 아이템 형식 지정-->
                     <ListBox.ItemTemplate>
+                        <!-- 기본적으로 toString을 호출하므로(결과 값 StackPanel.MenuList() 쯤) DataTemplate 태그 사용 -->
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal" Height="30">
-                                <TextBlock Text="{Binding Title}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <StackPanel Orientation="Horizontal" Height="60">
+                                <TextBlock Text="{Binding Title}"
+                                           HorizontalAlignment="Center" VerticalAlignment="Center"
+                                           Margin="3"/>
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
             </ScrollViewer>
+
+            <Frame x:Name="menu_main_frame" Grid.Column="1" Focusable="False" />
         </Grid>
 
     </Grid>

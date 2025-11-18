@@ -1,0 +1,19 @@
+------------------------------------------------
+				네이밍 규칙
+------------------------------------------------
+
+* 폴더							플랫케이스
+  ex) model / view / viewmodel
+
+
+				<< .cs >>
+* 클래스						파스칼케이스
+  ex) MenuItem / AdPage / MainWindow
+
+* 변수							카멜케이스
+  ex) title / menuList
+
+
+				<< .xaml >>
+* 명칭							스네이크케이스
+  ex) main_frame / menu_main_frame

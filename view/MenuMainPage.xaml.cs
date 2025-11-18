@@ -15,16 +15,14 @@ using System.Windows.Shapes;
 
 namespace Pos_Client.view
 {
-    public partial class MenuPage : Page
+    /// <summary>
+    /// MenuMainPage.xaml에 대한 상호 작용 논리
+    /// </summary>
+    public partial class MenuMainPage : Page
     {
-        public MenuPage()
+        public MenuMainPage()
         {
-            // ~xaml 에서 binding 하는 방식 이므로 생략
-
-            // xaml 구문 분석 및 로드 시 호출 함수
             InitializeComponent();
-
-            menu_main_frame.Source = new Uri("/view/MenuMainPage.xaml", UriKind.Relative);
         }
     }
 }

@@ -7,6 +7,10 @@
         mc:Ignorable="d" Title="Client"
         Height="450" Width="800">
     <Grid>
+        <!--
+        Frame : Window 내 Page 를 표시하기 위함
+        NavigationUIVisibility : 상단 네비게이션 바(뒤로가기/앞으로가기 등의 버튼을 포함함) 표시 여부. 
+        -->
         <Frame x:Name="main_frame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

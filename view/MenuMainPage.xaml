@@ -1,0 +1,41 @@
+﻿<Page x:Class="Pos_Client.view.MenuMainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Pos_Client.view"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="600"
+      Title="MenuMainPage">
+
+    <Grid Background="White" Margin="5">
+        <StackPanel>
+        <TextBlock Text="123456" FontSize="16" Height="50" Foreground="White" Background="Black" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Orientation="Vertical">
+                    <Button Background="Yellow" Height="130" Margin="5"/>
+                    <!-- 임시 -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock Text="  터진 콜라  " />
+                        <Button Content="  -  "/>
+                        <Button Content="  +  " />
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+        
+        <!--<ListView>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="123456" FontSize="16" Height="50" Background="Black" VerticalAlignment="Center"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>-->
+    </Grid>
+</Page>
