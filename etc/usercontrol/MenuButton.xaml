@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="Pos_Client.etc.usercontrol.MenuButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Pos_Client.etc.usercontrol">
+    <StackPanel Grid.Column="0" Orientation="Vertical">
+        <Button x:Name="menu_img" Background="Yellow" Height="130" Margin="5"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <!-- 상품명 -->
+            <TextBlock x:Name="menu_name" Text="터진 콜라" Margin="2"/>
+            <!-- 수량 버튼 -->
+            <local:QuantityButton x:Name="quantity_btn" />
+        </StackPanel>
+    </StackPanel>
+</UserControl>

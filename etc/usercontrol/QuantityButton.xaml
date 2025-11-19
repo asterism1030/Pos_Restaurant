@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="Pos_Client.etc.usercontrol.QuantityButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Pos_Client.etc.usercontrol">
+    <Grid Margin="3">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="0" x:Name="minus" Content=" - " VerticalContentAlignment="Center" Margin="2"
+                Click="MinusBtn_Click"/>
+        <TextBlock Grid.Column="1" x:Name="quantity"  Text="0" Margin="2"/>
+        <Button Grid.Column="2" x:Name="plus"  Content=" + " VerticalContentAlignment="Center" Margin="2"
+                Click="PlusBtn_Click"/>
+    </Grid>
+</UserControl>
