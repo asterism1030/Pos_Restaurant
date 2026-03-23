@@ -24,6 +24,7 @@ namespace Pos_Client.etc.usercontrol
         // TODO) 접근자 관련 리팩토링
         public List<MenuButton> menus = new List<MenuButton> ();
 
+
         public MenuArray()
         {
             InitializeComponent();

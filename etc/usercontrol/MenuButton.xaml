@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Pos_Client.etc.usercontrol">
     <StackPanel Grid.Column="0" Orientation="Vertical">
+        <!-- 이미지 버튼 -->
         <Button x:Name="menu_img" Background="Yellow" Height="130" Margin="5"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
             <!-- 상품명 -->

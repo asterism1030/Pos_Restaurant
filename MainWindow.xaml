@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pos_Client"
         mc:Ignorable="d" Title="Client"
-        Height="450" Width="800">
+        Height="450" Width="800"
+        ResizeMode="NoResize" >
     <Grid>
         <!--
         Frame : Window 내 Page 를 표시하기 위함

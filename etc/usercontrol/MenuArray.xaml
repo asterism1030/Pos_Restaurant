@@ -9,6 +9,7 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
+
         <local:MenuButton x:Name="menu1" Grid.Column="0"/>
         <local:MenuButton x:Name="menu2" Grid.Column="1"/>
         <local:MenuButton x:Name="menu3" Grid.Column="2"/>

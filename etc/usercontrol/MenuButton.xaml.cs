@@ -25,6 +25,12 @@ namespace Pos_Client.etc.usercontrol
 
         public string Menu_Name = "";
 
+
+        public MenuButton()
+        {
+            InitializeComponent();
+        }
+
         public MenuButton(string menuName)
         {
             InitializeComponent();

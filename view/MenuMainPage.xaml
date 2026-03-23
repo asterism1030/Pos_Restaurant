@@ -9,44 +9,26 @@
       d:DesignHeight="450" d:DesignWidth="600"
       Title="MenuMainPage">
 
-    <Grid Background="White" Margin="5">
-        <StackPanel>
-            <TextBlock x:Name="menu_title" Text="123456" FontSize="16" Height="50" Foreground="White" Background="Black" />
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                </Grid.RowDefinitions>
+    <Grid Background="White" Margin="5" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0"
+                   x:Name="menu_title" Text="123456" FontSize="16" Foreground="White" Background="Black" />
 
-                <uc:MenuButton x:Name="menu_btn_1" Grid.Row="0" Grid.Column="0"/>
-            </Grid>
-
-            <!--<ListView x:Name="menu_list">
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn />
-                        <GridViewColumn />
-                        <GridViewColumn />
-                        <GridViewColumn />
-                    </GridView>
-                </ListView.View>
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <uc:MenuButton />
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>-->
-            
-        </StackPanel>
-        
+        <ScrollViewer Grid.Row="1" Grid.Column="0"
+                      VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden" >
+            <StackPanel >
+                <uc:MenuArray x:Name="menu_array_1" />
+                <uc:MenuArray x:Name="menu_array_2" />
+                <uc:MenuArray x:Name="menu_array_3" />
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
+
 </Page>
