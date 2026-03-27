@@ -3,10 +3,10 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Pos_Client.view"
+      xmlns:uc="clr-namespace:Pos_Client.etc.usercontrol"
       xmlns:viewmodel="clr-namespace:Pos_Client.viewmodel"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="500" d:DesignWidth="800"
       Title="MenuPage">
     <!--
     cs 가 아닌 xaml 에서의 databinding 방식
@@ -15,7 +15,7 @@
         <viewmodel:MenuPageViewModel />
     </Page.DataContext>
 
-    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="435" Width="800">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="485" Width="800">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10*"  />
             <ColumnDefinition Width="30*" />
@@ -37,17 +37,7 @@
             </ListBox>
         </ScrollViewer>
 
-        <Grid Grid.Column="1">
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition Height="50" />
-            </Grid.RowDefinitions>
-            <Frame Grid.Row="0" x:Name="menu_main_frame" Focusable="False" />
+        <Frame Grid.Column="1" x:Name="menu_main_frame" Focusable="False" />
             
-            <!-- 임시. UserControl 생성 예정 -->
-            <TextBlock Grid.Row="1" Background="SkyBlue" Text="총 금액"/>
-        </Grid>
-            
-
     </Grid>
 </Page>

@@ -17,7 +17,7 @@ namespace Pos_Client.view
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/view/MenuPage.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/view/MainPage.xaml", UriKind.Relative));
         }
     }
 }

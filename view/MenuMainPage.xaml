@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Pos_Client.view"
       xmlns:uc="clr-namespace:Pos_Client.etc.usercontrol"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="600"
+      d:DesignHeight="500" d:DesignWidth="600"
       Title="MenuMainPage">
 
     <Grid Background="White" Margin="5" VerticalAlignment="Top">
@@ -14,12 +14,8 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50" />
             <RowDefinition />
         </Grid.RowDefinitions>
-
-        <TextBlock Grid.Row="0" Grid.Column="0"
-                   x:Name="menu_title" Text="123456" FontSize="16" Foreground="White" Background="Black" />
 
         <ScrollViewer Grid.Row="1" Grid.Column="0"
                       VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden" >
