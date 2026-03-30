@@ -23,7 +23,8 @@ namespace Pos_Client.view
         public MainPage()
         {
             InitializeComponent();
-            menu_page.Source = new Uri("/view/MenuPage.xaml", UriKind.Relative);
+
+            menu_main_frame.Source = new Uri("/view/MenuMainPage.xaml", UriKind.Relative);
         }
     }
 }

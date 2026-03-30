@@ -6,7 +6,7 @@
       xmlns:uc="clr-namespace:Pos_Client.etc.usercontrol"
       xmlns:viewmodel="clr-namespace:Pos_Client.viewmodel"
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="800"
+      d:DesignHeight="470" d:DesignWidth="580"
       Title="MenuPage">
     <!--
     cs 가 아닌 xaml 에서의 databinding 방식
@@ -15,7 +15,7 @@
         <viewmodel:MenuPageViewModel />
     </Page.DataContext>
 
-    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="485" Width="800">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="450" Width="580">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10*"  />
             <ColumnDefinition Width="30*" />

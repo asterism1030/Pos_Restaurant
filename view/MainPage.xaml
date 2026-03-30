@@ -5,9 +5,15 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Pos_Client.view"
       xmlns:uc="clr-namespace:Pos_Client.etc.usercontrol"
+      xmlns:viewmodel="clr-namespace:Pos_Client.viewmodel"
       mc:Ignorable="d" 
       d:DesignHeight="500" d:DesignWidth="800"
       Title="MainPage">
+
+    <!-- TODO) viewmodel 이름 변경 -->
+    <Page.DataContext>
+        <viewmodel:MenuPageViewModel />
+    </Page.DataContext>
 
     <Grid Background="White">
         <Grid.ColumnDefinitions>
@@ -17,14 +23,43 @@
 
         <Grid Grid.Column="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
+                <RowDefinition Height="30"/>
                 <RowDefinition />
             </Grid.RowDefinitions>
 
             <uc:TopBar Grid.Row="0"/>
-            <Frame Grid.Row="1" x:Name="menu_page" Focusable="False" />
-        </Grid>
 
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10*" />
+                    <ColumnDefinition Width="30*" />
+                </Grid.ColumnDefinitions>
+                
+                <!-- 메뉴 목록 -->
+                <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="auto" Focusable="False">
+                    <ListBox x:Name="MenuTitle"
+                         ItemsSource="{Binding MenuList}">
+                        <!-- 아이템 형식 지정-->
+                        <ListBox.ItemTemplate>
+                            <!-- 기본적으로 toString을 호출하므로(결과 값 StackPanel.MenuList() 쯤) DataTemplate 태그 사용 -->
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Height="60">
+                                    <TextBlock Text="{Binding Title}"
+                                           HorizontalAlignment="Center" VerticalAlignment="Center"
+                                           Margin="3"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </ScrollViewer>
+
+                <!-- TODO) 목록별 메뉴 리스트 페이지로 수정 예정 -->
+                <Frame Grid.Column="1" x:Name="menu_main_frame" Focusable="False" />
+            </Grid>
+            
+        </Grid>
+        
+        <!-- 장바구니 -->
         <uc:Cart Grid.Column="1"/>
     </Grid>
 </Page>
