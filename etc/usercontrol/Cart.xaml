@@ -8,13 +8,13 @@
              d:DesignHeight="450" d:DesignWidth="340" FontWeight="Bold" FontSize="20">
     <Grid Background="White">
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="40"/>
             <RowDefinition />
+            <RowDefinition Height="40" />
             <RowDefinition Height="50" />
-            <RowDefinition Height="60" />
         </Grid.RowDefinitions>
         
-        <TextBlock Grid.Row="0" Margin="10" Text="장바구니" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" />
+        <TextBlock Grid.Row="0" Margin="5" Text="장바구니" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="15" />
 
         <Border Grid.Row="1" BorderBrush="SkyBlue" BorderThickness="0,2,0,2" Padding="5" Width="330">
             
@@ -26,10 +26,10 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             
-            <TextBlock Grid.Column="0" Text="합계" FontWeight="Bold" />
-            <TextBlock Grid.Column="1" Text="0" TextAlignment="Right" FontWeight="Bold"/>
+            <TextBlock Grid.Column="0" Text="합계" FontWeight="Bold" FontSize="15" />
+            <TextBlock Grid.Column="1" Text="0" TextAlignment="Right" FontWeight="Bold" FontSize="15"/>
         </Grid>
         
-        <Button Grid.Row="3" Margin="10, 5, 10, 5" Content="주문하기" Background="Orange" FontWeight="Bold" />
+        <Button Grid.Row="3" Margin="10, 5, 10, 5" Content="주문하기" Background="Orange" FontSize="15" />
     </Grid>
 </UserControl>
