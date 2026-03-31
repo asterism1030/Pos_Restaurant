@@ -34,31 +34,40 @@
                     <ColumnDefinition Width="10*" />
                     <ColumnDefinition Width="30*" />
                 </Grid.ColumnDefinitions>
-                
-                <!-- 메뉴 목록 -->
-                <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Hidden" Focusable="False">
-                    <ListBox x:Name="MenuTitle"
-                         ItemsSource="{Binding MenuList}">
-                        <!-- 아이템 형식 지정-->
-                        <ListBox.ItemTemplate>
-                            <!-- 기본적으로 toString을 호출하므로(결과 값 StackPanel.MenuList() 쯤) DataTemplate 태그 사용 -->
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal" Height="60"> <!-- TextBlock 의 높이 조정용 -->
-                                    <TextBlock Text="{Binding Title}"
+
+                <Grid Grid.Column="0" Background="#FFF6F6F6">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+
+                    <!-- 메뉴 목록 -->
+                    <ScrollViewer Grid.Row="0" Background="LightGray" VerticalScrollBarVisibility="Hidden" Focusable="False">
+                        <ListBox x:Name="MenuTitle" ItemsSource="{Binding MenuList}" Background="#FFF6F6F6" BorderBrush="{x:Null}" BorderThickness="0">
+                            <!-- 아이템 형식 지정-->
+                            <ListBox.ItemTemplate>
+                                <!-- 기본적으로 toString을 호출하므로(결과 값 StackPanel.MenuList() 쯤) DataTemplate 태그 사용 -->
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" Height="60">
+                                        <!-- TextBlock 의 높이 조정용 -->
+                                        <TextBlock Text="{Binding Title}"
                                            HorizontalAlignment="Center" VerticalAlignment="Center"
                                            Margin="3"/>
-                                </StackPanel>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </ScrollViewer>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </ScrollViewer>
+
+                    <Button Grid.Row="1" Margin="10, 5, 10, 5" Content="직원호출" Background="DarkGray" FontSize="15" BorderBrush="{x:Null}" />
+                </Grid>
 
                 <!-- TODO) 목록별 메뉴 리스트 페이지로 수정 예정 -->
                 <Frame Grid.Column="1" x:Name="menu_main_frame" Focusable="False" />
             </Grid>
-            
+
         </Grid>
-        
+
         <!-- 장바구니 -->
         <uc:Cart Grid.Column="1"/>
     </Grid>

@@ -15,8 +15,8 @@
         <!-- TODO) 버튼 내부 글자가 아니라 이미지로 변경 -->
         <Button Grid.Column="0" x:Name="minus" Content=" - " Background="SkyBlue" BorderBrush="{x:Null}"
                 Click="MinusBtn_Click" />
-        
-        <TextBlock Grid.Column="1" x:Name="quantity" Margin="10, 0, 10, 0"
+
+        <TextBlock Grid.Column="1" x:Name="quantity" Margin="10, 0, 10, 0" HorizontalAlignment="Center" VerticalAlignment="Center"
                    Text="0" />
 
         <Button Grid.Column="2" x:Name="plus"  Content=" + " Background="SkyBlue" BorderBrush="{x:Null}"

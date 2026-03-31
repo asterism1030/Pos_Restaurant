@@ -5,9 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Pos_Client.etc.usercontrol"
              xmlns:uc="clr-namespace:Pos_Client.etc.usercontrol"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="340" FontWeight="Bold" FontSize="20">
-    <Grid Background="White">
+             mc:Ignorable="d" >
+             <!--FontWeight="Bold" FontSize="20"--> 
+    <!--d:DesignHeight="450" d:DesignWidth="340" >-->
+    <Grid Background="#FFF6F6F6">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition />
@@ -17,12 +18,13 @@
         
         <TextBlock Grid.Row="0" Margin="5" Text="장바구니" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="15" />
 
-        <Border Grid.Row="1" BorderBrush="SkyBlue" BorderThickness="0,2,0,2" Padding="5" Width="330">
-            <ScrollViewer VerticalScrollBarVisibility="auto" Focusable="False">
-                <ListBox x:Name="cart_item" >
+        <Border Grid.Row="1" BorderBrush="SkyBlue" BorderThickness="0,2,0,2" Padding="3" Width="200">
+            <ScrollViewer Background="#FFF6F6F6" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Focusable="False">
+                <ListBox x:Name="cart_item" d:ItemsSource="{d:SampleData ItemCount=5}"
+                         Background="#FFF6F6F6" BorderBrush="{x:Null}" >
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <uc:CartItem />
+                            <uc:CartItem/>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
@@ -34,12 +36,12 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            
-            <TextBlock Grid.Column="0" Text="합계" FontWeight="Bold" FontSize="15" />
-            <TextBlock Grid.Column="1" x:Name="total_price" TextAlignment="Right" FontWeight="Bold" FontSize="15"
+
+            <TextBlock Grid.Column="0" Text="합계" Margin="8, 0, 0, 0" FontWeight="Bold" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <TextBlock Grid.Column="1" x:Name="total_price" Margin="0, 0, 8, 0" TextAlignment="Right" FontWeight="Bold" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Center"
                        Text="0" />
         </Grid>
-        
-        <Button Grid.Row="3" Margin="10, 5, 10, 5" Content="주문하기" Background="Orange" FontSize="15" />
+
+        <Button Grid.Row="3" Margin="10, 5, 10, 5"  Content="주문하기" Background="Orange" FontSize="15" BorderBrush="{x:Null}" />
     </Grid>
 </UserControl>
