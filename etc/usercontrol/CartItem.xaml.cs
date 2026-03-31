@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,19 +16,13 @@ using System.Windows.Shapes;
 namespace Pos_Client.etc.usercontrol
 {
     /// <summary>
-    /// MenuArray.xaml에 대한 상호 작용 논리
+    /// CartItem.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class MenuArray : UserControl //, INotifyCollectionChanged
+    public partial class CartItem : UserControl
     {
-        // TODO) 접근자 관련 리팩토링
-        public List<MenuButton> menus = new List<MenuButton> ();
-
-
-        public MenuArray()
+        public CartItem()
         {
             InitializeComponent();
         }
-
-        //public event NotifyCollectionChangedEventHandler CollectionChanged;
     }
 }

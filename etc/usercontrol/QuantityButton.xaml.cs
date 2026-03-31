@@ -36,7 +36,6 @@ namespace Pos_Client.etc.usercontrol
         {
             InitializeComponent();
             
-
             quantity.Text = val.ToString();
         }
 
@@ -46,11 +45,13 @@ namespace Pos_Client.etc.usercontrol
                 return;
 
             val--;
+            quantity.Text = val.ToString();
         }
 
         private void PlusBtn_Click(object sender, RoutedEventArgs e)
         {
             val++;
+            quantity.Text = val.ToString();
         }
 
 
