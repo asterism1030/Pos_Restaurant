@@ -1,4 +1,5 @@
 ﻿using Pos_Client.etc.usercontrol;
+using Pos_Client.model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,14 +30,14 @@ namespace Pos_Client.view
         {
             InitializeComponent();
 
-            menus.Add(new MenuButton("터진콜라"));
-            menus.Add(new MenuButton("웃긴콜라"));
-            menus.Add(new MenuButton("바보콜라"));
-            menus.Add(new MenuButton("시간 넘치는 콜라"));
-            menus.Add(new MenuButton("한가한 콜라"));
+            //menus.Add(new MenuButton("/esset/menu_img/udon_1.PNG", "터진콜라1", "탄산때문에 터진 콜라", 1));
+            //menus.Add(new MenuButton("/esset/menu_img/udon_1.PNG", "터진콜라2", "탄산때문에 터진 콜라", 1));
+            //menus.Add(new MenuButton("/esset/menu_img/udon_1.PNG", "터진콜라3", "탄산때문에 터진 콜라", 1));
+            //menus.Add(new MenuButton("/esset/menu_img/udon_1.PNG", "터진콜라4", "탄산때문에 터진 콜라", 1));
 
-            //menu_list.ItemsSource = menus;
-            //menu_array
+
+            //menu_1.menu_img.Source = new BitmapImage(new Uri("/esset/menu_img/udon_1.PNG", UriKind.Relative));
+            menu_1.menu_name.Text = "테스트";
         }
     }
 }

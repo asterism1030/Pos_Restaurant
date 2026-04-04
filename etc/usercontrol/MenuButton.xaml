@@ -7,9 +7,19 @@
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        
+
         <!-- 이미지 버튼 -->
-        <Button Grid.Row="0" x:Name="menu_img" Background="Yellow" Width="180" Height="130" BorderBrush="{x:Null}" />
+        <Button Grid.Row="0" x:Name="menu_btn" Width="180" Height="130" BorderBrush="{x:Null}" 
+                Click="menu_img_Click" >
+            <!--<Grid>
+                <Image x:Name="menu_img" Source="/Pos_Client;component/asset/menu_img/udon_1.PNG" Stretch="Fill"/>
+            </Grid>-->
+            <Image>
+                <Image.Source>
+                    <BitmapImage UriSource="/asset/menu_img/udon_1.PNG"/>
+                </Image.Source>
+            </Image>
+        </Button>
 
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>

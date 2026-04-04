@@ -7,4 +7,14 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="asset\menu_img\tmp.PNG" />
+    <None Remove="asset\menu_img\udon_1.PNG" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="asset\menu_img\tmp.PNG" />
+    <Resource Include="asset\menu_img\udon_1.PNG" />
+  </ItemGroup>
+
 </Project>

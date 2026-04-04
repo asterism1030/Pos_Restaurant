@@ -9,6 +9,6 @@
       Title="AdPage">
 
     <Grid>
-        <Button Content="임시" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Button_Click"/>
+        <Button Content="(광고 이미지)" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Button_Click"/>
     </Grid>
 </Page>
