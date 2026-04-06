@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Pos_Client.model
 {
-    public class Menu
+    public class MenuClassification
     {
         public string Title { get; set; }
 
-        public Menu(string title)
+        public MenuClassification(string title)
         {
             Title = title;
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pos_Client.viewmodel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,7 +25,16 @@ namespace Pos_Client.view
         {
             InitializeComponent();
 
-            menu_main_frame.Source = new Uri("/view/MenuMainPage.xaml", UriKind.Relative);
+            DataContext = new MainPageViewModel();
         }
+
+        //private void Menu_classification_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    var listbox = sender as ListBox;
+        //    if (listbox.SelectedValue != null)
+        //    {
+
+        //    }
+        //}
     }
 }

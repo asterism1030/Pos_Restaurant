@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Pos_Client.model
 {
-    public class MenuCollectionList : ObservableCollection<Menu>
+    public class MenuCollectionList : ObservableCollection<MenuClassification>
     {
 
     }
