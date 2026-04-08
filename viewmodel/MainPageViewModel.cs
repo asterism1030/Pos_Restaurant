@@ -2,12 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Navigation;
 
 namespace Pos_Client.viewmodel
 {
@@ -19,6 +13,7 @@ namespace Pos_Client.viewmodel
         {
             MenuCollectionList menuList = new MenuCollectionList();
 
+            // TODO) ViewModel 로 이동하거나 (미리보기 화면을 위한) 구조 변경..?
             menuList.Add(new MenuClassification("우동"));
             menuList.Add(new MenuClassification("돈까스"));
             menuList.Add(new MenuClassification("덮밥"));

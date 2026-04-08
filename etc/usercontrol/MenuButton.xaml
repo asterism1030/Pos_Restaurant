@@ -1,7 +1,7 @@
 ﻿<UserControl x:Class="Pos_Client.etc.usercontrol.MenuButton"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Pos_Client.etc.usercontrol">
+             xmlns:local="clr-namespace:Pos_Client.etc.usercontrol" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
@@ -13,7 +13,7 @@
                 Click="menu_img_Click" >
             <Image>
                 <Image.Source>
-                    <BitmapImage UriSource="/asset/menu_img/udon_1.PNG"/>
+                    <BitmapImage x:Name="menu_img_uri" UriSource="/asset/menu_img/tmp.PNG" />
                 </Image.Source>
             </Image>
         </Button>
@@ -32,9 +32,9 @@
 
                 <!-- 상품명 -->
                 <TextBlock Grid.Row="0" x:Name="menu_name" TextWrapping="Wrap"
-                           Text="터진 콜라" Margin="0, 5, 3, 3" FontSize="12" />
+                           Text="{Binding name}" Margin="0, 5, 3, 3" FontSize="12" />
                 <TextBlock Grid.Row="1" x:Name="menu_info" TextWrapping="Wrap"
-                           Text="탄산때문에 터진 제로 코카콜라" Margin="3" FontSize="8" />
+                           Text="{Binding info}" Margin="3" FontSize="8" />
             </Grid>
 
             <!-- 수량 버튼 -->

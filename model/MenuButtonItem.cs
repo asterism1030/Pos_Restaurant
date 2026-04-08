@@ -34,8 +34,13 @@ namespace Pos_Client.model
         #endregion
 
 
-        public MenuButtonItem() {
+        public MenuButtonItem() { }
 
+        public MenuButtonItem(string imgUri, string name, string info, int quantity) {
+            this.imgUri = imgUri;
+            this.name = name;
+            this.info = info;
+            Quantity = quantity;
         }
     }
 }
